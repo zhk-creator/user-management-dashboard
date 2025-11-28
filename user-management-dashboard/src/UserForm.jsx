@@ -12,12 +12,12 @@ export default function UserForm() {
     name: "",
     email: "",
     phone: "",
-    company: "",
+    // company: "",
     address: {
       street: "",
       city: "",
       zipcode: "",
-      geo: { lat: "", lng: "" },
+      // geo: { lat: "", lng: "" },
     },
   });
 
@@ -86,7 +86,7 @@ export default function UserForm() {
   return (
     <div className="container mt-5">
       <h2>{isEdit ? "Edit User" : "Create New User"}</h2>
-      <form onSubmit={handleSubmit} noValidate>
+      <form onSubmit={handleSubmit }noValidate>
         <div className="mb-3">
           <label className="form-label">Name *</label>
           <input
@@ -122,16 +122,6 @@ export default function UserForm() {
           />
         </div>
 
-        <div className="mb-3">
-          <label className="form-label">Company</label>
-          <input
-            type="text"
-            className="form-control"
-            name="company"
-            value={formData.company}
-            onChange={handleChange}
-          />
-        </div>
 
         <h5>Address</h5>
         <div className="mb-3">
@@ -167,32 +157,9 @@ export default function UserForm() {
           />
         </div>
 
-        <h6>Geo</h6>
-        <div className="row">
-          <div className="col">
-            <label className="form-label">Latitude</label>
-            <input
-              type="text"
-              className="form-control"
-              name="geo.lat"
-              value={formData.address.geo.lat}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="col">
-            <label className="form-label">Longitude</label>
-            <input
-              type="text"
-              className="form-control"
-              name="geo.lng"
-              value={formData.address.geo.lng}
-              onChange={handleChange}
-            />
-          </div>
-        </div>
-
         <button type="submit" className="btn btn-success mt-4">
           {isEdit ? "Update User" : "Create User"}
+
         </button>
       </form>
     </div>

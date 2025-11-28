@@ -43,8 +43,7 @@ export default function Dashboard() {
             <tr>
               <th>Name</th>
               <th>Email</th>
-              <th>Company</th>
-              <th>Actions</th>
+              a
             </tr>
           </thead>
           <tbody>
@@ -55,7 +54,7 @@ export default function Dashboard() {
               <tr key={user._id}>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
-                <td>{user.company}</td>
+              
                 <td>
                   <Link to={`/user/${user._id}`} className="btn btn-sm btn-info me-2">View</Link>
                   <Link to={`/edit/${user._id}`} className="btn btn-sm btn-warning me-2">Edit</Link>

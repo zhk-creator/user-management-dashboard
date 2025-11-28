@@ -32,9 +32,9 @@ export default function UserDetails() {
         <p><strong>Name:</strong> {user.name}</p>
         <p><strong>Email:</strong> {user.email}</p>
         <p><strong>Phone:</strong> {user.phone}</p>
-        <p><strong>Company:</strong> {user.company}</p>
+        {/* <p><strong>Company:</strong> {user.company}</p> */}
         <p><strong>Address:</strong> {user.address.street}, {user.address.city}, {user.address.zipcode}</p>
-        <p><strong>Geo:</strong> Lat: {user.address.geo.lat}, Lng: {user.address.geo.lng}</p>
+        {/* <p><strong>Geo:</strong> Lat: {user.address.geo.lat}, Lng: {user.address.geo.lng}</p> */}
       </div>
       <Link to="/" className="btn btn-secondary mt-3">Back to Dashboard</Link>
     </div>
